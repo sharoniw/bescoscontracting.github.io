@@ -45,42 +45,7 @@
             top: 0;
             z-index: 100;
         }
-        /* Paste this right after your header block (around line 33) */
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 5px 0;
-        }
-
-        .nav-divider {
-            color: rgba(255, 255, 255, 0.4); 
-            margin: 0 12px;
-            font-size: 14px;
-            user-select: none;
-        }
-
-        .nav-links .active-nav {
-            color: white;
-            position: relative;
-        }
-
-        .nav-links .active-nav::after {
-            content: '';
-            position: absolute;
-            bottom: -18px; 
-            left: 40%;
-            width: 20%;
-            height: 6px;
-            background-color: var(--primary); 
-        }
         header .logo {
             color: white;
             font-size: 24px;
@@ -310,7 +275,7 @@
     <header>
     <div class="logo">BESCOS<span>CONTRACTING</span></div>
     <nav class="nav-links">
-        <a href="index.html" class="active-nav">Home</a>
+        <a href="index.html">Home</a>
         <span class="nav-divider">|</span>
         <a href="about.html">Our Company</a>
         <span class="nav-divider">|</span>
@@ -322,8 +287,8 @@
         <span class="nav-divider">|</span>
         <a href="careers.html">Careers</a>
         <span class="nav-divider">|</span>
-        <a href="contact.html">Contact Us</a>
-    </nav>
+        <a href="contact.html" class="active-nav">Contact Us</a>
+      </nav>
     </header>
 
         <div class="form-group">
