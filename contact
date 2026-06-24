@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | BESCOS Contracting</title>
+    <style>
+        /* Keep your exact CSS styling variables and navigation rules pasted here */
+    </style>
+</head>
+<body>
+
+    <!-- The exact same header layout -->
+    <header>
+        <div class="logo">BESCOS<span>CONTRACTING</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <span class="nav-divider">|</span>
+            <a href="about.html">Our Company</a>
+            <span class="nav-divider">|</span>
+            <a href="services.html">Construction Services</a>
+            <span class="nav-divider">|</span>
+            <a href="gallery.html">Photo Gallery</a>
+            <span class="nav-divider">|</span>
+            <a href="projects.html">Recent Projects</a>
+            <span class="nav-divider">|</span>
+            <a href="careers.html">Careers</a>
+            <span class="nav-divider">|</span>
+            <!-- NOTICE: Move the "active-nav" class to highlight this page! -->
+            <a href="contact.html" class="active-nav">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Panel specific to this page -->
+    <main>
+        <!-- Place your specific page content here (like the contact details strip and form block) -->
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BESCOS Contracting. All rights reserved. Licensed & Insured. | bescoscontracting.org</p>
+    </footer>
+
+</body>
+</html>
