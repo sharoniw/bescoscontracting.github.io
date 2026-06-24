@@ -22,7 +22,7 @@
 
         body {
             color: var(--text);
-            background-color: white;
+            background-color: #f4f6f7;
             line-height: 1.6;
         }
 
@@ -49,7 +49,6 @@
             color: var(--primary);
         }
 
-        /* Navigation Row Layout styling */
         .nav-links {
             display: flex;
             align-items: center;
@@ -75,7 +74,6 @@
             user-select: none;
         }
 
-        /* Yellow bottom accent bar highlighting the active page */
         .nav-links .active-nav {
             color: white;
             position: relative;
@@ -91,11 +89,32 @@
             background-color: var(--primary); 
         }
 
-        /* Horizontal Details Strip Layout */
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9));
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-banner h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero-banner p {
+            font-size: 16px;
+            color: #bdc3c7;
+        }
+
+        /* Modern Details Strip (From image_cdf95f.png) */
         .details-strip-container {
             max-width: 1200px;
-            margin: 60px auto 20px auto;
-            padding: 0 20px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             display: grid;
             grid-template-columns: 1fr;
             gap: 30px;
@@ -107,7 +126,7 @@
                 gap: 0;
             }
             .strip-col:not(:last-child) {
-                border-right: 1px solid #cccccc;
+                border-right: 1px solid #e0e0e0;
                 padding-right: 25px;
             }
             .strip-col:not(:first-child) {
@@ -116,33 +135,36 @@
         }
 
         .strip-col h2 {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             color: var(--dark);
-            line-height: 1.1;
+            line-height: 1.2;
             text-transform: uppercase;
         }
 
         .strip-col .label-tag {
-            font-size: 14px;
+            font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #777777;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-weight: bold;
         }
 
         .strip-col h3 {
-            font-size: 18px;
+            font-size: 16px;
             text-transform: uppercase;
             color: var(--dark);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .strip-col p {
-            font-size: 15px;
-            color: #444444;
+            font-size: 14px;
+            color: #555555;
             margin-bottom: 5px;
         }
 
@@ -156,18 +178,38 @@
             color: var(--primary);
         }
 
-        /* Contact & Quote Form Section */
+        /* Contact Section Form Container */
         .contact-section {
-            padding: 40px 10% 80px 10%;
-            max-width: 800px;
+            padding: 20px 20px 60px 20px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .contact-section h2 {
+        .form-container-box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-container-box h2 {
             text-align: center;
             margin-bottom: 30px;
             font-size: 24px;
             color: var(--dark);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .form-container-box h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
         }
 
         .form-group {
@@ -176,21 +218,25 @@
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-weight: bold;
+            color: var(--dark);
+            font-size: 14px;
         }
 
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 12px 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            font-size: 16px;
+            font-size: 15px;
+            transition: border-color 0.3s;
         }
 
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
         }
 
         .submit-btn {
@@ -205,20 +251,21 @@
             border-radius: 4px;
             text-transform: uppercase;
             transition: background 0.3s;
+            margin-top: 10px;
         }
 
         .submit-btn:hover {
             background-color: var(--primary);
         }
 
-        /* Footer Element */
+        /* Footer */
         footer {
             background-color: var(--dark);
             color: #bdc3c7;
             text-align: center;
             padding: 30px 20px;
             font-size: 14px;
-            margin-top: 40px;
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -244,106 +291,71 @@
         </nav>
     </header>
 
-
-   <!-- Hero Headline Banner -->
-  <section class="hero-banner">
-    <div class="hero-overlay">
-      <h1>Let's Build Something Exceptional</h1>
-      <p>Premium contracting solutions tailored for Baltimore and surrounding Maryland communities.</p>
-    </div>
-  </section>
-
-  <!-- Main Split Content Area -->
-  <main class="contact-page-container">
-    
-    <!-- Left Panel: Brand Details -->
-    <div class="contact-info-panel">
-      <div class="panel-tag">Contact Us</div>
-      <h2>Get In Touch</h2>
-      <p class="subtitle">Have an upcoming commercial or residential project? Reach out today for a consultation or customized project estimation.</p>
-      
-      <div class="info-card-grid">
-        <div class="info-card">
-          <div class="card-icon">📞</div>
-          <div class="card-text">
-            <h3>Call Us</h3>
-            <p><a href="tel:4436008459">(443) 600-8459</a></p>
-          </div>
-        </div>
-        
-        <div class="info-card">
-          <div class="card-icon">✉️</div>
-          <div class="card-text">
-            <h3>Message Us</h3>
-            <p><a href="mailto:info@bescoscontracting.org">info@bescoscontracting.org</a></p>
-          </div>
-        </div>
-        
-        <div class="info-card">
-          <div class="card-icon">📍</div>
-          <div class="card-text">
-            <h3>Service Area</h3>
-            <p>Serving Baltimore & Surrounding Maryland Areas</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Panel: Formspree Action Form -->
-    <div class="contact-form-panel">
-      <h3>Send A Message</h3>
-      <form action="https://formspree.io/f/your_endpoint_here" method="POST" class="styled-action-form">
-        <div class="form-group">
-          <label for="full-name">Full Name</label>
-          <input type="text" id="full-name" name="name" required placeholder="John Doe">
-        </div>
-        
-        <div class="form-group">
-          <label for="email-address">Email Address</label>
-          <input type="email" id="email-address" name="_replyto" required placeholder="johndoe@example.com">
-        </div>
-
-        <div class="form-group">
-          <label for="phone-number">Phone Number</label>
-          <input type="tel" id="phone-number" name="phone" placeholder="(410) 555-0100">
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Project Details / Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project dynamics..."></textarea>
-
-             <button type="submit" class="submit-btn">Submit Request</button>
-      </form>
-    </div>
+    <!-- Top Hero Banner Title -->
+    <section class="hero-banner">
+        <h1>Let's Build Something Exceptional</h1>
+        <p>Premium contracting solutions tailored for Baltimore and surrounding Maryland communities.</p>
     </section>
-      
- <!-- Clean Vertical-Border Contact Details Section -->
+
+    <!-- Clean Horizontal Info Layout Strip (Matches image_cdf95f.png) -->
     <section class="details-strip-container">
         <div class="strip-col">
-            <div class="label-tag">Get In Touch</div>
-            <h2>Contact Details</h2>
-            <p style="margin-top: 15px; color: #666666;">We will deliver the best possible solution. Call us.</p>
+            <div class="label-tag">Contact Us</div>
+            <h2>Get In Touch</h2>
+            <p style="margin-top: 10px;">Have an upcoming commercial or residential project? Reach out today for a consultation or customized project estimation.</p>
         </div>
         
         <div class="strip-col">
-            <h3>Call Us</h3>
+            <h3>📞 Call Us</h3>
             <p>Phone Number:</p>
             <p><strong><a href="tel:4436008459">(443) 600-8459</a></strong></p>
         </div>
 
         <div class="strip-col">
-            <h3>Message Us</h3>
+            <h3>✉️ Message Us</h3>
             <p>Email Address:</p>
             <p><strong><a href="mailto:info@bescoscontracting.org">info@bescoscontracting.org</a></strong></p>
         </div>
 
         <div class="strip-col">
-            <h3>Visit Us</h3>
-            <p>Service Area:</p>
+            <h3>📍 Service Area</h3>
+            <p>Locations:</p>
             <p>Serving Baltimore & Surrounding Maryland Areas</p>
         </div>
     </section>
-    <!-- Footer Notes -->
+
+    <!-- Lead Intake Form Box -->
+    <section class="contact-section">
+        <div class="form-container-box">
+            <h2>Send A Message</h2>
+            <!-- Make sure to change YOUR_FORM_ID to your actual Formspree endpoint -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="johndoe@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(410) 555-0100">
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Project Details / Message</label>
+                    <textarea id="details" name="details" rows="5" required placeholder="Tell us about your project dynamics..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 BESCOS Contracting. All rights reserved. Licensed & Insured. | bescoscontracting.org</p>
     </footer>
